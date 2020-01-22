@@ -1,9 +1,11 @@
 
 import { treeable, isArray } from './tree';
+import { DataMap, createMap } from './common.ts';
 
-treeable();
-isArray();
 export {
   treeable,
   isArray,
+
+  DataMap,
+  createMap,
 };
