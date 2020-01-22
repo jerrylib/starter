@@ -23,8 +23,17 @@ module.exports = () => {
               presets: ['@babel/preset-env'],
             },
           },
+          exclude: /node_modules/,
+        },
+        {
+          test: /\.ts$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
         },
       ],
+    },
+    resolve: {
+      extensions: ['.js', '.ts', '.css', '.scss'], // 添加在此的后缀所对应的文件可以省略后缀
     },
     // 开启 webpack-dev-server 插件
     devServer: {
